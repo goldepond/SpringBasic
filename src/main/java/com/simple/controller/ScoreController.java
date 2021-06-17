@@ -16,7 +16,7 @@ import com.simple.service.ScoreService;
 import com.simple.service.ScoreServiceIMPL;
 
 @Controller
-//@RequestMapping("/service")
+@RequestMapping("/service")
 public class ScoreController {
 //	2번방법
 //	@Autowired

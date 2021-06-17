@@ -9,6 +9,8 @@ import com.simple.command.BoardVO;
 public class BoardDAOImpl implements BoardDAO {
 
 	private ArrayList<BoardVO> list = new ArrayList<BoardVO>();
+	
+	
 	@Override
 	public void boardRegist(BoardVO vo) {
 		System.out.println(vo.getTitle());
