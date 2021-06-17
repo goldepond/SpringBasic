@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
  */
 @Controller
 public class HomeController {
-	
+	//로그 찍어주는 문장
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
 	
 	/**
