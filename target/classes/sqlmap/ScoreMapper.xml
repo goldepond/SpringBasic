@@ -1,0 +1,36 @@
+<!-- 반드시 선언해야더됨 마이바티스매퍼로 사용한다는 의미 -->
+
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- namespace에는 참조할 인터페이스명 기술 -->
+<mapper namespace="com.simple.mapper.ScoreMapper">
+
+
+
+
+	<insert id="regist">
+		<!-- 1번방법 = 마이바티스에서 jspt에 sqld에 ?를 #{}로변경 2번방법 = 다중값으경우 vo객체의 setter로 전달 
+			3번방법 = @param으로 전달하는 방법 -->
+		insert into T_score values (T_score_seq.nextval,
+		#{name},#{kor},#{math})
+	</insert>
+
+
+	<!-- 단일값같은 경우 resultType에 String, int 형으로 적음 select문에서 반환받아서 가져갈 vo의 우치를 
+		resultType에 적음 -->
+	<!--  <select id="getList" resultType="com.simple.command.ScoreVO">-->
+	<select id="getList" resultType="ScoreVO"><!-- 마이바티스 컴피그에서 줄임말 구현 -->
+		select * from T_score
+	</select>
+
+
+	<delete id="delete">
+		delete from T_score where bno = #{num}
+	</delete>
+	
+	
+	
+	
+</mapper>

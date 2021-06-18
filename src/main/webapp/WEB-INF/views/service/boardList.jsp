@@ -26,7 +26,7 @@
 			<td>${vo.title}</td>
 			<td>${vo.content}</td>
 			<td>이상 무</td>		
-			<td><input type="button" value="삭제" onclick="location.href='boardDelete ?num=${idx.index}'"></td>
+			<td><input type="button" value="삭제" onclick="location.href='boardDelete ?num=${vo.bno}'"></td>
 		</c:forEach>
 			<!-- 
 			1. boardDelete로 삭제 처리하세요. 

@@ -3,7 +3,7 @@
 	<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
-<head>
+<head>	
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
@@ -15,7 +15,7 @@
 		이름 ${vo.name}
 		국어 ${vo.kor}
 		 수학 ${vo.math}
-		 <button type="button" onclick="location.href='scoreDelete?num=${idx.index}'">삭제</button>
+		 <button type="button" onclick="location.href='scoreDelete?num=${vo.bno}'">삭제</button>
 	</c:forEach>
 	<a href="">점수입력</a>
 	
